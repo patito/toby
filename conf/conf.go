@@ -14,13 +14,13 @@ type Settings struct {
     Nickname string `json:"nickname"`
 }
 
-const jsonFile = "settings.json"
+const jsonFile = "conf/settings.json"
 
 var settings *Settings = nil
 
 var logFile = "/tmp/toby.log"
 
-func get() *Settings {
+func Get() *Settings {
 
     if settings == nil {
 
