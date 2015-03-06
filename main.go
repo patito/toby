@@ -2,11 +2,17 @@ package main
 
 import (
 	"fmt"
-	conf "github.com/patito/toby/conf"
+	"github.com/patito/toby/conf"
 )
 
 func main() {
 
-	fmt.Printf("%s", conf.Get().Server)
+	fmt.Printf("Server = %s\n", conf.Config.Server)
+	fmt.Printf("Nickname = %s\n", conf.Config.Nickname)
+	fmt.Printf("Channel = %s\n", conf.Config.Channel)
+	fmt.Printf("LogFile = %s\n", conf.LogFile)
+
+	fmt.Printf("%p\n", conf.Config)
+
 	return
 }
